@@ -4,29 +4,46 @@ public class AdjcentStringCalculationUsingJava {
 	
 	public static void main(String args[])
 	{
-		
+		// Given input string
 		String s = "hello";
-		int temp=0;
-		int add=0;
-		int c=0;
 		
-		for(int i=0;i<s.length()-1;i++)
+		// Variable to store temporary difference between characters
+		int temp = 0;
+		
+		// Variable to store the total sum of adjacent ASCII differences
+		int add = 0;
+		
+		// Unused variable (always prints 0)
+		int c = 0;
+		
+		// Loop through the string characters except the last one
+		for(int i = 0; i < s.length() - 1; i++)
 		{
-			char d=s.charAt(i);
-			char dd=s.charAt(i+1);
+			// Get the current character
+			char d = s.charAt(i);
 			
-			int a=d;
-			int b=dd;
+			// Get the next adjacent character
+			char dd = s.charAt(i + 1);
 			
-			//printing ascii values
+			// Convert characters to their ASCII integer values
+			int a = d;
+			int b = dd;
 			
-			temp=Math.abs(a-b);
-			add=add+temp;
+			// Calculate the absolute difference between ASCII values
+			temp = Math.abs(a - b);
+			
+			// Add the difference to the total sum
+			add = add + temp;
+			
+			// Print each step difference
 			System.out.println(temp);
 		}
 		
+		// Print value of unused variable
 		System.out.println(c);
-		System.out.println("RESULT OF THE GIVEN STRING AFTER CONVERTOR INTO THE CHARACTER TO INTEGER AND ADDED AJCENT OF THE STRING IS :"+add);
+		
+		// Print the final result
+		System.out.println("RESULT OF THE GIVEN STRING AFTER CONVERTOR INTO THE CHARACTER TO INTEGER AND ADDED AJCENT OF THE STRING IS :" + add);
 	}
 
 }
